@@ -1,4 +1,4 @@
-# Convention de nomage générles
+# Convention de nomage générales
 
 Ces présentes conventions ont pour objectif d'harmoniser les noms des fichiers, des fonctions ou classes utilisées au sein des projets web.
 
