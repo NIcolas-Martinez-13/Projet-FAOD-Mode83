@@ -1,4 +1,4 @@
-# Convention de nomage html
+# Convention de nommage html
 
 ## Utilisez des noms descriptifs 
     Nommez les éléments HTML de manière à ce qu'ils décrivent leur contenu ou leur fonction. Évitez d'utiliser des noms génériques tels que "div1"  ou "element2". Par exemple, au lieu d'utiliser
