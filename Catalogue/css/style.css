@@ -1,0 +1,14 @@
+.card{
+    border-radius:0;
+}
+.card-img-top{
+    border-radius: 0;
+}
+
+.btn-blink {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% { border: 3px solid transparent; }
+    100% {border: 3px solid #dc3545; } /* Rouge (#dc3545) pour la couleur du contour clignotant */
+  }
