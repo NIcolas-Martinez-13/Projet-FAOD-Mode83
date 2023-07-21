@@ -12098,9 +12098,12 @@ textarea.form-control-lg {
   background-color: #EB7366;
 }
 
-.navbar-light, .navbar-toggler {
-  border: transparent;
-  color: transparent;
+.burger {
+  width: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 1174px) {

@@ -81,8 +81,6 @@
     // height: fit-content;
 }
 
-
-
 .foad {
     font-weight: bolder;
     color: #FEA740;
@@ -97,18 +95,11 @@
     background-color: $button;
 }
 
-.navbar-light, .navbar-toggler {
-    border: transparent;
-    color: transparent;
-}
-.navbar-toggler-icon {
-    // display: inline-block;
-    // width: 1.5rem;
-    // height: 1.5rem;
-    // vertical-align: middle;
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: 100%;
+.burger {
+    width: 50px;
+    height: fit-content;
+    align-self: center;
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 1174px) {
