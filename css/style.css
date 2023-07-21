@@ -1,6 +1,6 @@
-div a {
+fiiter div a {
   color: white;
 }
-div a:hover {
+footer div a:hover {
   color: #f76751;
 }
