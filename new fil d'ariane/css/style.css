@@ -1,0 +1,37 @@
+/* styles.css */
+.breadcrumb-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.breadcrumb {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 11px;
+}
+
+.breadcrumb li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.breadcrumb li:not(:last-child):after {
+  content: "/";
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #999;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
