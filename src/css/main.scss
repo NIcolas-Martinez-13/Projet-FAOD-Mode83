@@ -73,7 +73,7 @@
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
 }
 
-.nav-button {
+.nav-link {
     text-decoration: none;
     padding: 10px 15px 10px 15px;
     color: $title1;
@@ -95,34 +95,28 @@
     background-color: $button;
 }
 
-.burger {
-    width: 50px;
-    height: fit-content;
-    align-self: center;
-    margin-right: 20px;
-}
-
-@media screen and (max-width: 1174px) {
+@media screen and (max-width: 1252px) {
     .foad-second {
         display: none;
     }    
 }
 
 @media screen and (min-width: 993px) {
-    // .header-burger {
-    //     visibility: collapse;
-    // }
+
 }
 
-@media screen and (max-width: 992px) {
-    .header-navbar {
-        visibility: collapse;
-    }
+@media screen and (max-width: 991px) {
     .header-search-bar {
-        visibility: collapse;
+        display: none;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 360px) {
+    .foad {
+        display: none;
+    }
+}
 
+*{
+    border: solid 1px black;
 }
