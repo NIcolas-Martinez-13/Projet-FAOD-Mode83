@@ -11991,6 +11991,8 @@ textarea.form-control-lg {
 }
 /* Custom CSS here */
 .header {
+  display: inline-block;
+  justify-content: space-evenly;
   background-color: white;
   font-size: 22px;
   font-family: "Helvetica Neue Regular";
@@ -12015,7 +12017,7 @@ textarea.form-control-lg {
 
 .header-search-bar {
   min-width: 100px;
-  max-width: 300px;
+  max-width: 400px;
   box-shadow: inset 0px 4px 11px rgba(0, 0, 0, 0.08);
   height: -moz-fit-content;
   height: fit-content;
@@ -12023,6 +12025,17 @@ textarea.form-control-lg {
   border: 1px solid #555;
   display: block;
   background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+.search-mini {
+  width: 32px;
+  height: 32px;
+}
+
+.search-mini, .account-button {
+  border: none;
+  background-color: transparent;
+  margin: 0 0.25rem 0 0.25rem;
 }
 
 .nav-link {
@@ -12045,9 +12058,27 @@ textarea.form-control-lg {
   background-color: #EB7366;
 }
 
-@media screen and (max-width: 1252px) {
+@media screen and (max-width: 800px) {
   .foad-second {
     display: none;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1292px) {
+  .account-button, .close-button, .search-mini, .foad-second {
+    display: none;
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-grow: 0;
+  }
+}
+@media screen and (min-width: 1292px) {
+  .account-button, .close-button, .search-mini {
+    display: none;
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-grow: 0;
   }
 }
 @media screen and (max-width: 991px) {
@@ -12055,21 +12086,20 @@ textarea.form-control-lg {
     display: none;
   }
   .navbar-nav {
-    width: 93vw;
+    width: 100%;
     text-align: center;
     background-color: #FFFFFF;
   }
-  .navbar-collapse {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-  }
   .navbar-toggler {
     border: none;
+    padding: 4px;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 480px) {
   .foad {
     display: none;
+  }
+  .header {
+    padding: 0;
   }
 }

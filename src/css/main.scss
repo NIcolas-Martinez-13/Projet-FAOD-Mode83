@@ -27,18 +27,9 @@
     
 /* Custom CSS here */
 
-
-// .header-content {
-//     display: flex;
-//     margin-top: 20px;
-//     justify-content: space-evenly;
-//     white-space: nowrap;
-//     margin-left: 5%;
-//     margin-right: 5%;
-//     height: 133px;
-// }
-
 .header{
+    display: inline-block;
+    justify-content: space-evenly;
     background-color: white;
     font-size: 22px;
     font-family: 'Helvetica Neue Regular';
@@ -58,13 +49,13 @@
         font-family: 'Helvetica Condensed Bold';
     }
     .foad-second {
-    font-family: 'Helvetica Neue Regular';
+        font-family: 'Helvetica Neue Regular';
     }
 }
 
 .header-search-bar {
     min-width: 100px;
-    max-width: 300px;
+    max-width: 400px;
     box-shadow: inset 0px 4px 11px rgba(0, 0, 0, 0.08);
     height: fit-content;
     padding-left: 40px;
@@ -72,6 +63,17 @@
     display: block;
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
 }
+
+.search-mini {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .search-mini, .account-button {
+    border: none;
+    background-color: transparent;
+    margin: 0 0.25rem 0 0.25rem;
+  }
 
 .nav-link {
     text-decoration: none;
@@ -95,28 +97,63 @@
     background-color: $button;
 }
 
-@media screen and (max-width: 1252px) {
+@media screen and (max-width: 800px) {
     .foad-second {
         display: none;
     }    
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 992px) and (max-width: 1292px) {
+    .account-button, .close-button, .search-mini, .foad-second {
+      display: none;
+    }
 
+    .navbar-collapse {
+        display: flex;
+        flex-grow: 0;
+    }
+  }
+
+@media screen and (min-width: 1292px) {
+    .account-button, .close-button, .search-mini {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        flex-grow: 0;
+    }
 }
 
 @media screen and (max-width: 991px) {
     .header-search-bar {
         display: none;
     }
-}
 
-@media screen and (max-width: 360px) {
-    .foad {
-        display: none;
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+        background-color: #FFFFFF;
+    }
+    
+    // .navbar-collapse {
+    //     position: absolute;
+    //     width: 100%;
+    //     top: 100%;
+    // }
+
+    .navbar-toggler {
+        border: none;
+        padding: 4px;
     }
 }
 
-*{
-    border: solid 1px black;
-}
+@media screen and (max-width: 480px) {
+    .foad {
+      display: none;
+    }
+  
+    .header {
+      padding: 0;
+    }
+  }
