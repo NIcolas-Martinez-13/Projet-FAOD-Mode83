@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -68,3 +69,71 @@ body{overflow: hidden;}
 .lol {
     height:2rem;
 }
+=======
+/* Réinitialisation des marges, des paddings et boîte de modèle pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    overflow: hidden;
+  }
+  
+  /* Classe pour la barre de recherche */
+  .searchingbar {
+    height: 3rem;
+  }
+  
+  /* Classe pour le style personnalisé du texte */
+  .custom-fs {
+    color: #000;
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  /* Classe pour ajuster la hauteur de la fenêtre modale */
+  .modal-height {
+    height: 80vh;
+    top: 7vh;
+  }
+  
+  /* Classe pour cacher les éléments avec la classe .is-hidden */
+  .is-hidden {
+    display: none;
+  }
+  
+  /* Classe pour le style personnalisé des éléments dans la fenêtre modale */
+  .fs-modal {
+    font-size: 32px;
+    margin-top: -15px;
+  }
+  
+  /* Classe pour afficher les éléments en tant que flexbox avec une disposition en ligne */
+  .custom-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Classe pour définir le style personnalisé du bouton */
+  .custom-btn-color {
+    background-color: #f76751;
+    color: white;
+  }
+  
+  /* Media query pour les écrans de taille maximale de 767 pixels */
+  @media (max-width: 767px) {
+    /* Style personnalisé pour les éléments avec la classe .fs-modal dans les petits écrans */
+    .fs-modal {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  
+    /* Style personnalisé pour les éléments avec la classe .custom-flex dans les petits écrans */
+    .custom-flex {
+      flex-direction: column;
+    }
+  }
+  
+>>>>>>> 0f2b7784913e393309af45e38e3e523f51ff57d4
