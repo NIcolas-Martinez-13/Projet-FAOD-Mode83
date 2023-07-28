@@ -1,4 +1,3 @@
-//test
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,53 +10,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   </head>
   <body>
-    <!-- Le conteneur principal avec marges horizontales offset de 2 a partir du breakpoint xl-->
-    <div class="container-fluid offset-xl-2">
-      <!-- Une colonne qui s'étend sur 6 colonnes sur les écrans larges et 2 colonnes sur les écrans moyens -->
-      <div class="col-6 col-2-md">
-        <!-- Le titre "Formations" avec une classe personnalisée "custom-fs" -->
-        <h1 class="custom-fs">Formations</h1>
+    <div class="container-fluid">
+      <div class="container col-lg-8 col-xl-8 col-md-10 col-sm-10 searchingbar px-0 ">
+        <h1 class="custom-fs line-custom">Formations</h1>
       </div>
-      <!-- Une div avec une bordure supérieure , peut être a déplacer dans le style css-->
-      <div class="border border-top border2 p-0 m-0" style="width: 100px; border-color: #f76751 !important"></div>
+      
     </div>
 
-    <!-- Un conteneur fluide avec un décalage vers la droite pour centrer le contenu -->
-    <div class="container-fluid offset-xl-2 mt-5 mb-5 searchingbar">
-      <!-- Formulaire de recherche avec une disposition en ligne et hauteur de 100% -->
-      <form class="row h-100 g-0" role="search">
-        <!-- Zone de recherche avec une largeur de 8 colonnes sur les écrans normaux et 6 colonnes sur les écrans extra-larges, alignée verticalement -->
-        <div class="col-8 col-xl-6 d-flex align-items-center">
-          <!-- Champ de recherche avec une bordure sombre, une grande taille de police et hauteur de 100%, sans marges ni rembourrages -->
-          <input
+    <div class="container-fluid searchingbar  ">
+      <div class="container col-lg-8 col-xl-8 col-md-10 col-sm-10 searchingbar ">
+        <div class="row justify-content-center  ">
+          <div class="col-9 align-items-start ">
+            <form class="row " role="search">
+              <input
             type="search"
             oninput="liveSearch()"
-            class="col-9 border border-dark form-control fs-xl-4 h-100 rounded-0 m-0 p-0"
+            class=" border border-dark border-1 form-control fs-xl-4  rounded-0 searchingbar"
             placeholder="Trouver ma formation..."
             aria-label="Rechercher formation"
             id="searchbox"
           />
-        </div>
-        <!-- Bouton "Filtre" avec une largeur de 2 colonnes, aligné verticalement -->
-        <div class="col-2 align-middle">
-          <!-- Bouton stylisé en rouge avec une taille moyenne et une icône de filtre -->
-          <button
-            class="btn btn-danger rounded-0 btn-md col-12 d-flex justify-content-evenly align-items-center h-100"
+            </form>
+          </div>
+          <div class="col-3 searchingbar ">
+            <div class=" row ">
+              <button
+            class="btn btn-danger rounded-0 btn-md text-center d-flex justify-content-evenly align-items-center searchingbar"
             data-bs-toggle="modal"
             data-bs-target="#myModal"
             style="background-color: #f76751"
           >
             <!-- Texte "Filtre" visible uniquement sur les écrans larges, aligné au centre et en ligne avec l'icône -->
-            <p class="d-none d-sm-block text-center d-flex align-items-center m-0">Filtre</p>
+            <p class="d-none d-sm-block my-auto ">Filtre</p>
             <!-- Icône de filtre provenant de la bibliothèque Bootstrap Icons -->
             <i class="bi bi-funnel-fill"></i>
           </button>
+            </div>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
-
-    <!-- Fenêtre modale pour filtrer la recherche -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <!-- Fenêtre modale pour filtrer la recherche -->
+     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <!-- Contenu de la fenêtre modale -->
       <div class="modal-dialog modal-fullscreen modal-height custom-modal">
         <div class="modal-content">
@@ -128,6 +122,11 @@
         </div>
       </div>
     </div>
+
+   
+
+
+
 
     <!-- Chargement des bibliothèques externes -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
