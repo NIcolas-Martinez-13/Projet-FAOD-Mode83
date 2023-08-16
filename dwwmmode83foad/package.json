@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "sass": "^1.64.1",
+    "webpack": "^5.88.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9"
+  },
+  "name": "projet-faod-mode83",
+  "description": "Projet pour le site de formation en ligne mode83",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss:css"
+  },
+  "author": "",
+  "license": "ISC"
+}

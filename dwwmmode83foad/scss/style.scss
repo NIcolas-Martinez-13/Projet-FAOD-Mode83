@@ -1,0 +1,286 @@
+@import "home";
+
+@font-face {
+    font-family: 'MaPolice'; /* Nom de la police que vous souhaitez utiliser */
+    src: url('/assets/fonts/helvetica_condensed_bold.ttf'); /* Chemin vers le fichier de la police */
+    src: url('/assets/fonts/HelveticaNeue-Regular.ttf');
+    /* Ajoutez d'autres formats de police pour une meilleure compatibilité avec les navigateurs */
+    /* Par exemple :
+    src: url('chemin/vers/le/fichier/maPolice.woff2') format('woff2'),
+         url('chemin/vers/le/fichier/maPolice.ttf') format('truetype'); */
+  }
+  
+  /* Header */
+  .header {
+    background-color: white;
+    font-size: 22px;
+    font-family: "Helvetica Neue Regular";
+    box-shadow: 0px 0px 30px #0000002b;
+  }
+  
+  .header-logo {
+    max-width: 157px;
+    max-height: 81px;
+    min-width: 157px;
+    min-height: 81px;
+  }
+  
+  .header-title {
+    font-size: 25px;
+  }
+  .header-title .foad {
+    font-family: "Helvetica Condensed Bold";
+  }
+  .header-title .foad-second {
+    font-family: "Helvetica Neue Regular";
+  }
+  
+  .header-search-bar {
+    min-width: 100px;
+    max-width: 300px;
+    box-shadow: inset 0px 4px 11px rgba(0, 0, 0, 0.08);
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 40px;
+    border: 1px solid #555;
+    display: block;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .foad {
+    font-weight: bolder;
+    color: #FEA740;
+  }
+  .foad .foad-first {
+    color: #DE0000;
+  }
+  
+  .sign-in {
+    color: white;
+    background-color: #EB7366;
+  }
+  
+  @media screen and (max-width: 1252px) {
+    .foad-second {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .header-search-bar {
+      display: none;
+    }
+    .navbar-nav {
+      width: 93vw;
+      text-align: center;
+      background-color: #FFFFFF;
+    }
+    .navbar-collapse {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .foad {
+      display: none;
+    }
+  }
+  
+  /* Filtre de recherche */
+  /* Réinitialisation des marges, des paddings et boîte de modèle pour tous les éléments */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Classe pour la barre de recherche */
+  .searchingbar {
+    height: 3rem;
+  }
+  
+  /* Classe pour le style personnalisé du texte */
+  .custom-fs {
+    color: #000;
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  /* Classe pour ajuster la hauteur de la fenêtre modale */
+  .modal-height {
+    height: 80vh;
+    top: 7vh;
+  }
+  
+  /* Classe pour cacher les éléments avec la classe .is-hidden */
+  .is-hidden {
+    display: none;
+  }
+  
+  /* Classe pour le style personnalisé des éléments dans la fenêtre modale */
+  .fs-modal {
+    font-size: 32px;
+    margin-top: -15px;
+  }
+  
+  /* Classe pour afficher les éléments en tant que flexbox avec une disposition en ligne */
+  .custom-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Classe pour définir le style personnalisé du bouton */
+  .custom-btn-color {
+    background-color: #f76751;
+    color: white;
+  }
+  
+  /* Media query pour les écrans de taille maximale de 767 pixels */
+  @media (max-width: 767px) {
+    /* Style personnalisé pour les éléments avec la classe .fs-modal dans les petits écrans */
+    .fs-modal {
+      font-size: 16px;
+      margin-top: 0;
+    }
+  
+    /* Style personnalisé pour les éléments avec la classe .custom-flex dans les petits écrans */
+    .custom-flex {
+      flex-direction: column;
+    }
+  }
+  
+  
+  
+  
+  /* Fil ariane */
+  .breadcrumb-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 50px;
+    right: 10px;
+  }
+  
+  .breadcrumb {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 11px;
+  }
+  
+  .breadcrumb li {
+    display: inline;
+    padding: 0 10px;
+  }
+  
+  .breadcrumb li:not(:last-child):after {
+    content: "/";
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #999;
+  }
+  
+  .breadcrumb li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .breadcrumb li a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  /* Catalogue */
+  .card{
+    border-radius:0;
+  }
+  .card-img-top{
+    border-radius: 0;
+  }
+  
+  .btn-blink {
+  animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0% { border: 3px solid transparent; }
+    100% {border: 3px solid #dc3545; } /* Rouge (#dc3545) pour la couleur du contour clignotant */
+  }
+  
+  
+  
+  
+  /* Back to top btn */
+  .btt {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    font-size: 10px; /* Ajout pour définir la taille de l'icône */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .btn-up i {
+    border: none; /* Enlever la bordure de l'icône */
+    font-size: 8px; /* Ajout pour définir la taille de l'icône */
+    vertical-align: middle; /* Ajout pour centrer verticalement l'icône */
+    -webkit-text-stroke: 1px;
+  }
+  
+  .btn-up {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    background-color: #683d68;
+    opacity: 0.7;
+    border: none; /* Enlever la bordure du bouton */
+    border-radius: 2px;
+    color: white; /* Ajout pour changer la couleur du texte en blanc */
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  }
+  
+  .btn-up:hover {
+    background-color: #f76751;
+    opacity: 0.7;
+  }
+  
+  
+  
+  
+  /* Footer */
+  footer div a {
+    color: white;
+  }
+  footer div a:hover {
+    color: #f76751;
+  }
+  
+  
+  
+  
+  
