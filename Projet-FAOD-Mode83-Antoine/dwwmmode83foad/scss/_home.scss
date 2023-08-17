@@ -1,0 +1,294 @@
+@media (max-width: 767px) {
+    /* Styles pour les smartphones */
+    .home {
+      margin: 0px 30px;
+    }
+    .custom-paragraph {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 353px;text-align: justify;
+      justify-content: center;
+    }
+  
+    .img-home {
+      display: block;
+      margin: 0 auto;
+      min-width: 275px;
+      height: auto;
+      min-height: 178px;
+      filter: blur(0px 0px 15px rgba(0, 0, 0, 0.5));
+      border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+    }
+    .btn-custom {
+      background: #eb7366;
+  
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        
+      padding-left:20px;
+      padding-right:20px;
+      padding-bottom:10px;
+      padding-top:10px;
+    }
+    button {
+      font-size: 15px; /* Définit la taille de police à 14 pixels */
+      color: #ffffff; /* Définit la couleur du texte en blanc */
+      border: none; /* Supprime la bordure du bouton */
+      background-color: transparent; /* Définit la couleur de fond du bouton comme transparente */
+      padding: 0; /* Supprime le rembourrage interne du bouton */
+      margin: 10px; /* Ajoute une marge de 10 pixels autour du bouton */
+      font-weight: bold; /* Définit le poids de la police en gras */
+      background: #eb7366; /* Définit la couleur de fond de l'élément */
+  
+        border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+  
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles pour les tablettes */
+  
+    .home {
+      margin: 5px 72px;
+    }
+    .custom-paragraph {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 600px;
+      text-align: justify;
+    }
+  
+    .img-home {
+      width: auto;
+      height: auto;
+      filter: blur(0px 0px 15px rgba(0, 0, 0, 0.5))
+        /* Ajoute une ombre portée à l'image */
+        blur(0px 0px 10px rgba(0, 0, 0, 0.5)) blur(0px 0px 5px rgba(0, 0, 0, 0.5));
+      border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+    }
+  
+    .btn-custom {
+      background: #eb7366;
+  
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  
+    }
+  
+    button {
+      font-size: 24px; /* Définit la taille de police à 28 pixels */
+      font-weight: bold; /* Définit le poids de la police en gras */
+      color: #ffffff; /* Définit la couleur du texte en blanc */
+      border: none; /* Supprime la bordure du bouton */
+      background-color: transparent; /* Définit la couleur de fond du bouton comme transparente */
+      padding: 0; /* Supprime le rembourrage interne du bouton */
+      margin: 20px; /* Ajoute une marge de 20 pixels autour du bouton */
+      border-radius: 10px;
+      padding: 10px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* Styles pour les ordinateurs de bureau */
+  
+  
+    .home {
+      display: flex;
+      min-width: 800px;
+      justify-content: space-between;
+  
+    }
+    .custom-paragraph {
+      font-size: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: fit-content;
+      text-align: justify;
+      width: 640px;
+  padding-left: 10px;
+      /* white-space: pre-line; */
+    }
+  
+    .img-home {
+      max-width: 791px; /* Définit la largeur de l'image à 791 pixels */
+      height: auto; /* Définit la hauteur de l'image à 505 pixels */
+      filter: blur(0px 0px 15px rgba(0, 0, 0, 0.5))
+        /* Ajoute une ombre portée à l'image */
+        blur(0px 0px 10px rgba(0, 0, 0, 0.5)) blur(0px 0px 5px rgba(0, 0, 0, 0.5));
+      border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+      object-fit: cover;
+    }
+  
+    .btn-custom {
+      background: #eb7366;
+  
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      padding-left:30px;
+      padding-right:30px;
+      padding-bottom:10px;
+      padding-top:10px;
+      border-radius: 10px;
+    }
+    
+    button {
+      font-size: 22px; /* Définit la taille de police à 40 pixels */
+      color: #ffffff; /* Définit la couleur du texte en blanc */
+      border: none; /* Supprime la bordure du bouton */
+      background-color: transparent; /* Définit la couleur de fond du bouton comme transparente */
+      padding: 0; /* Supprime le rembourrage interne du bouton */
+      margin: 0; /* Supprime la marge autour du bouton */
+    }
+  }
+  
+  /* Import Google font - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  body {
+    box-sizing: border-box;
+  }
+  .carousel {
+    max-width: 1450px;
+  
+    margin: auto;
+  }
+  .wrapper {
+    display: flex;
+    max-width: 1600px;
+    position: relative;
+    margin: 0 auto;
+    height: auto;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #eb7366;
+    cursor: pointer;
+    font-size: 64px;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+  
+  .wrapper i:first-child {
+    left: 0;
+  
+    z-index: 1;
+  }
+  .wrapper i:last-child {
+    right: 0;
+    z-index: 1;
+  }
+  .wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+  .carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging img {
+    pointer-events: none;
+  }
+  .carousel img {
+    height: auto;
+    max-width: 490px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 7px;
+    width: calc(100% / 3);
+    border-radius: 10px;
+  }
+  .carousel img:first-child {
+    margin-left: 0px;
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .wrapper {
+      margin: 0 auto;
+      display: flex;
+      position: relative;
+      max-width: 800px;
+      height: auto;
+    }
+    .carousel {
+      margin: auto;
+      max-width: 660px;
+    }
+    .carousel img {
+      width: calc(100% / 2);
+      margin: 10px;
+      object-fit: cover;
+      user-select: none;
+      height: auto;
+  
+      border-radius: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    #left {
+      left: -10px;
+      z-index: 1;
+    }
+    #right {
+      right: -4px;
+      z-index: 1;
+    }
+    .wrapper {
+      display: flex;
+      max-width: 90vw;
+      position: relative;
+      margin: 0 auto;
+    }
+    .wrapper i {
+      top: 50%;
+      height: 44px;
+      width: 44px;
+      color: #eb7366;
+      cursor: pointer;
+      font-size: 1.15rem;
+      position: absolute;
+      text-align: center;
+      line-height: 44px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.1s linear;
+    }
+  
+    .wrapper i:first-child {
+      left: 0;
+  
+      z-index: 1;
+    }
+    .wrapper i:last-child {
+      right: 0;
+      z-index: 1;
+    }
+    .carousel {
+      margin: auto;
+      max-width: 270px;
+      border-radius: 5px;
+    }
+    .carousel img {
+      align-self: center;
+      margin: 9px;
+      height: auto;
+      max-width: 270px;
+      width: calc(100% / 1);
+      object-fit: cover;
+    }
+  }
+  

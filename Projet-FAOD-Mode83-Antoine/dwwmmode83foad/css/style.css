@@ -1,0 +1,547 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@media (max-width: 767px) {
+  /* Styles pour les smartphones */
+  .home {
+    margin: 0px 30px;
+  }
+  .custom-paragraph {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 353px;
+    text-align: justify;
+    justify-content: center;
+  }
+  .img-home {
+    display: block;
+    margin: 0 auto;
+    min-width: 275px;
+    height: auto;
+    min-height: 178px;
+    filter: blur(0px 0px 15px rgba(0, 0, 0, 0.5));
+    border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+  }
+  .btn-custom {
+    background: #eb7366;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  button {
+    font-size: 15px; /* Définit la taille de police à 14 pixels */
+    color: #ffffff; /* Définit la couleur du texte en blanc */
+    border: none; /* Supprime la bordure du bouton */
+    background-color: transparent; /* Définit la couleur de fond du bouton comme transparente */
+    padding: 0; /* Supprime le rembourrage interne du bouton */
+     /* Ajoute une marge de 10 pixels autour du bouton */
+    font-weight: bold; /* Définit le poids de la police en gras */
+    background: #eb7366; /* Définit la couleur de fond de l'élément */
+    border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+  }
+}
+@media (min-width: 768px) {
+  /* Styles pour les tablettes */
+  .home {
+    margin: 5px 72px;
+  }
+  .custom-paragraph {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 600px;
+    text-align: justify;
+  }
+  .img-home {
+    width: auto;
+    height: auto;
+    filter: blur(0px 0px 15px rgba(0, 0, 0, 0.5)) blur(0px 0px 10px rgba(0, 0, 0, 0.5)) blur(0px 0px 5px rgba(0, 0, 0, 0.5));
+    border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+  }
+  .btn-custom {
+    background: #eb7366;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  button {
+    font-size: 24px; /* Définit la taille de police à 28 pixels */
+    font-weight: bold; /* Définit le poids de la police en gras */
+    color: #ffffff; /* Définit la couleur du texte en blanc */
+    border: none; /* Supprime la bordure du bouton */
+    background-color: transparent; /* Définit la couleur de fond du bouton comme transparente */
+    padding: 0; /* Supprime le rembourrage interne du bouton */
+     /* Ajoute une marge de 20 pixels autour du bouton */
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  /* Styles pour les ordinateurs de bureau */
+  .home {
+    display: flex;
+    min-width: 800px;
+    justify-content: space-between;
+  }
+  .custom-paragraph {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: fit-content;
+    text-align: justify;
+    width: 640px;
+    padding-left: 10px;
+    /* white-space: pre-line; */
+  }
+  .img-home {
+    max-width: 791px; /* Définit la largeur de l'image à 791 pixels */
+    height: auto; /* Définit la hauteur de l'image à 505 pixels */
+    filter: blur(0px 0px 15px rgba(0, 0, 0, 0.5)) blur(0px 0px 10px rgba(0, 0, 0, 0.5)) blur(0px 0px 5px rgba(0, 0, 0, 0.5));
+    border-radius: 8px; /* Ajoute une bordure arrondie à l'image avec un rayon de 8 pixels */
+    object-fit: cover;
+  }
+  .btn-custom {
+    background: #eb7366;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+  }
+  button {
+    font-size: 22px; /* Définit la taille de police à 40 pixels */
+    color: #ffffff; /* Définit la couleur du texte en blanc */
+    border: none; /* Supprime la bordure du bouton */
+    background-color: transparent; /* Définit la couleur de fond du bouton comme transparente */
+    padding: 0; /* Supprime le rembourrage interne du bouton */
+    margin: 0; /* Supprime la marge autour du bouton */
+  }
+}
+/* Import Google font - Poppins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.carousel {
+  max-width: 1450px;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1600px;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #eb7366;
+  cursor: pointer;
+  font-size: 64px;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:first-child {
+  left: 0;
+  z-index: 1;
+}
+
+.wrapper i:last-child {
+  right: 0;
+  z-index: 1;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: auto;
+  max-width: 490px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 7px;
+  width: 33.3333333333%;
+  border-radius: 10px;
+}
+
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    max-width: 800px;
+    height: auto;
+  }
+  .carousel {
+    margin: auto;
+    max-width: 660px;
+  }
+  .carousel img {
+    width: 50%;
+    margin: 10px;
+    object-fit: cover;
+    user-select: none;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #left {
+    left: -10px;
+    z-index: 1;
+  }
+  #right {
+    right: -4px;
+    z-index: 1;
+  }
+  .wrapper {
+    display: flex;
+    max-width: 90vw;
+    position: relative;
+    margin: 0 auto;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #eb7366;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:first-child {
+    left: 0;
+    z-index: 1;
+  }
+  .wrapper i:last-child {
+    right: 0;
+    z-index: 1;
+  }
+  .carousel {
+    margin: auto;
+    max-width: 270px;
+    border-radius: 5px;
+  }
+  .carousel img {
+    align-self: center;
+    margin: 9px;
+    height: auto;
+    max-width: 270px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@font-face {
+  font-family: "MaPolice"; /* Nom de la police que vous souhaitez utiliser */
+  src: url("/assets/fonts/helvetica_condensed_bold.ttf"); /* Chemin vers le fichier de la police */
+  src: url("/assets/fonts/HelveticaNeue-Regular.ttf");
+  /* Ajoutez d'autres formats de police pour une meilleure compatibilité avec les navigateurs */
+  /* Par exemple :
+  src: url('chemin/vers/le/fichier/maPolice.woff2') format('woff2'),
+       url('chemin/vers/le/fichier/maPolice.ttf') format('truetype'); */
+}
+/* Header */
+.header {
+  background-color: white;
+  font-size: 22px;
+  font-family: "Helvetica Neue Regular";
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.168627451);
+}
+
+.header-logo {
+  max-width: 157px;
+  max-height: 81px;
+  min-width: 157px;
+  min-height: 81px;
+}
+
+.header-title {
+  font-size: 25px;
+}
+
+.header-title .foad {
+  font-family: "Helvetica Condensed Bold";
+}
+
+.header-title .foad-second {
+  font-family: "Helvetica Neue Regular";
+}
+
+.header-search-bar {
+  min-width: 100px;
+  max-width: 300px;
+  box-shadow: inset 0px 4px 11px rgba(0, 0, 0, 0.08);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 40px;
+  border: 1px solid #555;
+  display: block;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.foad {
+  font-weight: bolder;
+  color: #FEA740;
+}
+
+.foad .foad-first {
+  color: #DE0000;
+}
+
+.sign-in {
+  color: white;
+  background-color: #EB7366;
+}
+
+@media screen and (max-width: 1252px) {
+  .foad-second {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header-search-bar {
+    display: none;
+  }
+  .navbar-nav {
+    width: 93vw;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+  .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  .foad {
+    display: none;
+  }
+}
+/* Filtre de recherche */
+/* Réinitialisation des marges, des paddings et boîte de modèle pour tous les éléments */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Classe pour la barre de recherche */
+.searchingbar {
+  height: 3rem;
+}
+
+/* Classe pour le style personnalisé du texte */
+.custom-fs {
+  color: #000;
+  font-family: Arial;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Classe pour ajuster la hauteur de la fenêtre modale */
+.modal-height {
+  height: 80vh;
+  top: 7vh;
+}
+
+/* Classe pour cacher les éléments avec la classe .is-hidden */
+.is-hidden {
+  display: none;
+}
+
+/* Classe pour le style personnalisé des éléments dans la fenêtre modale */
+.fs-modal {
+  font-size: 32px;
+  margin-top: -15px;
+}
+
+/* Classe pour afficher les éléments en tant que flexbox avec une disposition en ligne */
+.custom-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Classe pour définir le style personnalisé du bouton */
+.custom-btn-color {
+  background-color: #f76751;
+  color: white;
+}
+
+/* Media query pour les écrans de taille maximale de 767 pixels */
+@media (max-width: 767px) {
+  /* Style personnalisé pour les éléments avec la classe .fs-modal dans les petits écrans */
+  .fs-modal {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  /* Style personnalisé pour les éléments avec la classe .custom-flex dans les petits écrans */
+  .custom-flex {
+    flex-direction: column;
+  }
+}
+/* Fil ariane */
+.breadcrumb-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 50px;
+  right: 10px;
+}
+
+.breadcrumb {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 11px;
+}
+
+.breadcrumb li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.breadcrumb li:not(:last-child):after {
+  content: "/";
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #999;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/* Catalogue */
+.card {
+  border-radius: 0;
+}
+
+.card-img-top {
+  border-radius: 0;
+}
+
+.btn-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    border: 3px solid transparent;
+  }
+  100% {
+    border: 3px solid #dc3545;
+  } /* Rouge (#dc3545) pour la couleur du contour clignotant */
+}
+/* Back to top btn */
+.btt {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  font-size: 10px; /* Ajout pour définir la taille de l'icône */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.btn-up i {
+  border: none; /* Enlever la bordure de l'icône */
+  font-size: 8px; /* Ajout pour définir la taille de l'icône */
+  vertical-align: middle; /* Ajout pour centrer verticalement l'icône */
+  -webkit-text-stroke: 1px;
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  background-color: #683d68;
+  opacity: 0.7;
+  border: none; /* Enlever la bordure du bouton */
+  border-radius: 2px;
+  color: white; /* Ajout pour changer la couleur du texte en blanc */
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+}
+
+.btn-up:hover {
+  background-color: #f76751;
+  opacity: 0.7;
+}
+
+/* Footer */
+footer div a {
+  color: white;
+}
+
+footer div a:hover {
+  color: #f76751;
+}
+
+/*# sourceMappingURL=style.css.map */

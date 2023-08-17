@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <script src="./src/js/script.js" defer></script>
+    <title>Document</title>
+    <link rel="stylesheet" href=".src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+        <!-- Le conteneur principal avec marges horizontales offset de 2 a partir du breakpoint xl-->
+        <div class="container-fluid offset-xl-2 offset-1 mt-5">
+          <!-- Une colonne qui s'étend sur 6 colonnes sur les écrans larges et 2 colonnes sur les écrans moyens -->
+          <div class="col-6 col-2-md">
+            <!-- Le titre "Formations" avec une classe personnalisée "custom-fs" -->
+            <h1 class="custom-fs">Accueil</h1>
+          </div>
+          <!-- Une div avec une bordure supérieure , peut être a déplacer dans le style css-->
+          <div class="border border-top border2 p-0 m-0" style="width: 100px; border-color: #f76751 !important"></div>
+        </div>
+    <div
+      class="container-fluid d-flex justify-content-lg-evenly mt-5"
+      style="overflow-x: hidden"
+    >
+      <div class="row" style="width: 1450px">
+        <div class="col home-start">
+          <div
+            class="d-sm-block d-md-block d-lg-flex home d-lg-row justify-content-lg-between"
+          >
+            <img
+              src="./src/image/placeholder.png"
+              alt="Image"
+              class="w-100 h-100 img-fluid mb-3 mb-md-0 col-md-6 order-sm-first img-home col-lg-6"
+            />
+            <!-- <div class="col-md-6 col-lg-6 col-sm-12 paragraph"> -->
+            <p class="custom-paragraph">
+              <br />
+              Bienvenue sur le site de formation à distance de Mode
+              83.Connectez-vous pour accéder à vos cours. <br /><br />
+              Mode 83 propose des formations ouvertes à distance sur
+              inscription.
+              <br /><br />Si vous êtes intéressés par nos formations n’hésitez
+              pas à explorer notre catalogue et faire une demande d’inscription.
+              Le secrétariat vous recontactera.
+            </p>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center m-5 mt-5">
+      <button class="btn-lg btn-custom">Financer ma formation</button>
+    </div>
+
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <div class="carousel">
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+        <img src="./src/image/placeholder.png" alt="img" draggable="false" />
+      </div>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center m-5 mt-5">
+      <button class="btn-lg btn-custom">Explorer le catalogue</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

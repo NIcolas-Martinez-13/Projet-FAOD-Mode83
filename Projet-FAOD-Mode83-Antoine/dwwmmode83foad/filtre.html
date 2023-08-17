@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  </head>
+  <body>
+    <!-- Le conteneur principal avec marges horizontales offset de 2 a partir du breakpoint xl-->
+    <div class="container-fluid offset-xl-2 offset-1 mt-5">
+      <!-- Une colonne qui s'étend sur 6 colonnes sur les écrans larges et 2 colonnes sur les écrans moyens -->
+      <div class="col-6 col-2-md">
+        <!-- Le titre "Formations" avec une classe personnalisée "custom-fs" -->
+        <h1 class="custom-fs">Formations</h1>
+      </div>
+      <!-- Une div avec une bordure supérieure , peut être a déplacer dans le style css-->
+      <div class="border border-top border2 p-0 m-0" style="width: 100px; border-color: #f76751 !important"></div>
+    </div>
+
+    <!-- Un conteneur fluide avec un décalage vers la droite pour centrer le contenu -->
+    <div class="container-fluid offset-xl-2 offset-1 mt-5 mb-5 searchingbar pe-0 pe-xl-4">
+      <!-- Formulaire de recherche avec une disposition en ligne et hauteur de 100% -->
+      <form class="row h-100 g-0" role="search">
+        <!-- Zone de recherche avec une largeur de 8 colonnes sur les écrans normaux et 6 colonnes sur les écrans extra-larges, alignée verticalement -->
+        <div class="col-7 col-xl-6 d-flex align-items-center">
+          <!-- Champ de recherche avec une bordure sombre, une grande taille de police et hauteur de 100%, sans marges ni rembourrages -->
+          <input
+            type="search"
+            oninput="liveSearch()"
+            class="col-7 border border-dark form-control fs-xl-4 h-100 rounded-0 m-0 p-0"
+            placeholder="Trouver ma formation..."
+            aria-label="Rechercher formation"
+            id="searchbox"
+          />
+        </div>
+        <!-- Bouton "Filtre" avec une largeur de 2 colonnes, aligné verticalement -->
+        <div class="col-2 ge-2 align-middle">
+          <!-- Bouton stylisé en rouge avec une taille moyenne et une icône de filtre -->
+          <button
+            class="btn btn-danger rounded-0 btn-md col-12 d-flex justify-content-evenly align-items-center h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+            style="background-color: #f76751"
+          >
+            <!-- Texte "Filtre" visible uniquement sur les écrans larges, aligné au centre et en ligne avec l'icône -->
+            <p class="d-none d-sm-block text-center d-flex align-items-center m-0">Filtre</p>
+            <!-- Icône de filtre provenant de la bibliothèque Bootstrap Icons -->
+            <i class="bi bi-funnel-fill"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Fenêtre modale pour filtrer la recherche -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Contenu de la fenêtre modale -->
+      <div class="modal-dialog modal-fullscreen modal-height custom-modal">
+        <div class="modal-content">
+          <!-- En-tête de la fenêtre modale -->
+          <div class="modal-header">
+            <!-- Titre de la fenêtre modale -->
+            <h5 class="modal-title" id="exampleModalLabel">Filtrer la recherche</h5>
+            <!-- Bouton pour fermer la fenêtre modale -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- Corps de la fenêtre modale -->
+          <div class="modal-body">
+            <!-- Conteneur fluide pour organiser le contenu en lignes et colonnes -->
+            <div class="container-fluid custom-flex">
+              <!-- Colonne prenant 10 colonnes sur les écrans normaux et 6 colonnes sur les écrans de taille moyenne, décalée de 1 colonne vers la droite -->
+              <div class="col-10 col-md-6 offset-1">
+                <!-- Case à cocher 1 -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    <p class="fs-modal">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </label>
+                </div>
+                <!-- Case à cocher 2 -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    <p class="fs-modal">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </label>
+                </div>
+                <!-- Case à cocher 3 -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    <p class="fs-modal">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </label>
+                </div>
+                <!-- Case à cocher 4 -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    <p class="fs-modal">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </label>
+                </div>
+                <!-- Case à cocher 5 -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    <p class="fs-modal">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Colonne prenant 5 colonnes sur les écrans normaux et 1 colonne sur les écrans de taille moyenne -->
+              <div class="col-5 col-md-1">
+                <!-- Libellé pour le champ de saisie -->
+                <label for="dateInput" class="form-label">DATE</label>
+                <!-- Champ de saisie pour la date -->
+                <input type="text" id="dateInput" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <!-- Pied de la fenêtre modale -->
+          <div class="modal-footer">
+            <!-- Bouton pour valider les choix et fermer la fenêtre modale -->
+            <button type="button" class="btn custom-btn-color" data-bs-dismiss="modal">Valider</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chargement des bibliothèques externes -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script 1 : Gestion du clic sur le bouton de déclenchement de la fenêtre modale -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Sélection du bouton de déclenchement de la fenêtre modale par son attribut data-bs-target
+        const modalTriggerButton = document.querySelector('[data-bs-target="#myModal"]');
+
+        // Ajout d'un écouteur d'événement sur le clic du bouton de déclenchement
+        modalTriggerButton.addEventListener("click", function (event) {
+          event.preventDefault(); // Empêche le comportement par défaut du bouton
+          console.log("Bouton de déclenchement de la fenêtre modale cliqué");
+        });
+      });
+    </script>
+
+    <!-- Script 2 : Configuration du sélecteur de date -->
+    <script>
+      flatpickr("#dateInput", {
+        dateFormat: "d-m-Y", // Format de date (jour-mois-année)
+      });
+    </script>
+
+    <!-- Chargement des bibliothèques externes pour le bon fonctionnement de Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script 3 : Chargement du fichier search.js -->
+    <script src="/js/search.js"></script>
+  </body>
+</html>
