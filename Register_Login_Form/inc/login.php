@@ -4,13 +4,15 @@
 require_once 'functions.php';
 reconnect_cookies();
 
-if(!empty($_POST)&& !empty($_POST['username'] && !empty($_POST['password']))) {
+if(!empty($_POST)&&!empty($_POST['Username'] && !empty($_POST['password']))) {
+echo"coucou";
+    require_once 'db.php';
 
-    require_once 'inc/db.php';
-    require_once 'inc/functions.php';
-    $req = $pdo->prepare('SELECT * FROM utilisateurconnecte WHERE username = :username OR email = :username AND confirmed_at IS NOT NULL ');
-    $req->execute(['username' => $_POST['username']]);
+    $req = $pdo->prepare('SELECT * FROM utilisateurconnecte WHERE Username = :Username OR email = :Username AND confirmed_at IS NOT NULL ');
+    $req->execute(['Username' => $_POST['Username']]);
     $user = $req->fetch();
+
+    var_dump($user->password);
     if(password_verify($_POST['password'], $user->password)) {
         session_start();
         $_SESSION['auth'] = $user;
@@ -18,18 +20,19 @@ if(!empty($_POST)&& !empty($_POST['username'] && !empty($_POST['password']))) {
         if($_POST['remember']) {
             $remember_token = str_random(250);
             $pdo->prepare('UPDATE utilisateurconnecte SET remember_token = ? WHERE idUser = ?')
-                ->execute([$remember_token, $user->id]);
-
+                ->execute([$remember_token, $user->idUser]);
             setcookie('remember', $user->id.'=='.$remember_token. sha1($user->id. 'ratonlaveurs'), time() + 60*60*24*7);
         }
-        header('Location: inc/account.php');
+        
+        
+        
+    header('Location: account.php');
         exit();
-
-
-    } else {
+    }
+    
+    else {
         $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrect';
     }
-
 }
 ?> 
 <?php
@@ -51,11 +54,11 @@ require('../php/head.php'); ?>
 
         <form>
             <div class="w-full mt-4">
-                <input class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="text" placeholder="Pseudo ou Email" aria-label="Adresse Mail" />
+                <input name="Username"class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="text" placeholder="Pseudo ou Email" aria-label="Adresse Mail" />
             </div>
 
             <div class="w-full mt-4">
-                <input class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="password" placeholder="Mot de passe" aria-label="Mot de passe" />
+                <input name="password"class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-lg  focus:border-blue-400 dark:focus:border-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring focus:ring-blue-300" type="password" placeholder="Mot de passe" aria-label="Mot de passe" />
             </div>
 
             <div class="w-full mt-4">
@@ -64,7 +67,7 @@ require('../php/head.php'); ?>
 </label>
             </div>
             <div class="flex items-center justify-between mt-4">
-                <a href="inc/forget.php" class="text-sm text-gray-600  hover:text-gray-500">Mot de passe oublié ?</a>
+                <a href="forget.php" class="text-sm text-gray-600  hover:text-gray-500">Mot de passe oublié ?</a>
 
                 <button class="px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                     Connexion

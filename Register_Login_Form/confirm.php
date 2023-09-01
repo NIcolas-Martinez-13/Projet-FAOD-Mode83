@@ -1,11 +1,12 @@
 <?php 
-
-$user_id = $_GET['idUser'];
-$token = $_GET['token'];
 require 'inc/db.php';
+
+$user_id = $_GET['id'];
+$token = $_GET['token'];
 $req = $pdo -> prepare('SELECT * FROM UtilisateurConnecte WHERE idUser = ?');
 $req->execute([$user_id]);
 $user = $req ->fetch();
+
 
 session_start();
 if($user && $user->confirmation_token == $token){
@@ -17,5 +18,5 @@ header('Location: inc/account.php');
 
 }else{
     $_SESSION['flash']['danger']= "Ce token n'est plus valide";
-header('Location: inc/login.php');
+// header('Location: inc/login.php');
 }
