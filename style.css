@@ -1,0 +1,10 @@
+
+@media screen and (max-width: 768px) {
+    .small{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .small-h1{
+        font-size: 3rem;
+    }
+}
